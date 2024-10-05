@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+
+# Define the make_graph function
+def make_graph(data):
+    plt.figure(figsize=(12, 6))  # Set the figure size
+    plt.plot(data['Date'], data['Close'], label='Tesla Stock Price', color='blue')  # Plot the closing price
+    plt.title('Tesla Stock Price Over Time')  # Set the title of the graph
+    plt.xlabel('Date')  # Label for the x-axis
+    plt.ylabel('Closing Price (USD)')  # Label for the y-axis
+    plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
+    plt.legend()  # Show legend
+    plt.grid(True)  # Show grid
+    plt.tight_layout()  # Adjust layout
+    plt.show()  # Display the graph
+
+# Assuming tesla_data is already defined from previous steps
+make_graph(tesla_data)
