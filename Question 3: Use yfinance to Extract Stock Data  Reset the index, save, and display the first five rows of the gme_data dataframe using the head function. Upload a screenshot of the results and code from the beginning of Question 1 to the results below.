@@ -1,0 +1,11 @@
+# Step 1: Import the necessary library
+import yfinance as yf
+
+# Step 2: Download GameStop stock data from Yahoo Finance
+gme_data = yf.download('GME', start='2020-01-01', end='2023-10-01')
+
+# Step 3: Reset the index of the DataFrame
+gme_data.reset_index(inplace=True)
+
+# Step 4: Display the first five rows of the DataFrame
+print(gme_data.head())
