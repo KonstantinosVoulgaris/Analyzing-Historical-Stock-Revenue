@@ -1,0 +1,16 @@
+#Question 1: Use yfinance to Extract Stock Data
+#Reset the index, save, and display the first five rows of the tesla_data dataframe 
+#using the head function. Upload a screenshot of the results and code from the 
+#beginning of Question 1 to the results below.
+
+# Step 1: Import the necessary library
+import yfinance as yf
+
+# Step 2: Download Tesla stock data from Yahoo Finance
+tesla_data = yf.download('TSLA', start='2020-01-01', end='2023-10-01')
+
+# Step 3: Reset the index of the DataFrame
+tesla_data.reset_index(inplace=True)
+
+# Step 4: Display the first five rows of the DataFrame
+print(tesla_data.head()) 
